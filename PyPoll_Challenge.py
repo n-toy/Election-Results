@@ -86,7 +86,7 @@ with open(os.path.join('analysis','election_results.txt'),"w") as txt_file:
             winning_county_count = votes_county
             winning_county_percentag = vote_county_percentage
 
-        #format output of da counties
+        #write and print results to txt_file
         county_results = (f"{county}: {vote_county_percentage:.1f}% ({votes_county:,})\n")
         txt_file.write(county_results)
         print(county_results)
@@ -127,7 +127,7 @@ with open(os.path.join('analysis','election_results.txt'),"w") as txt_file:
             winning_candidate = candidates
             winning_candidate_count = votes_candidate
             winning_candidate_percentage = vote_percentage
-        #format output of da candidates
+        #write and print results to txt_file
         candidate_results = (f"{candidates}: {vote_percentage:.1f}% ({votes_candidate:,}) \n")
         txt_file.write(candidate_results)
         print(candidate_results)
@@ -143,7 +143,7 @@ with open(os.path.join('analysis','election_results.txt'),"w") as txt_file:
         
 
 
-
+    #write and print winning candidate summary
     txt_file.write(winning_candidate_summary)
     print(winning_candidate_summary)   
     
